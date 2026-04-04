@@ -1,0 +1,2 @@
+# Realtime-Flight-Data-Engineering-Airflow-Snowflake
+End-to-end ETL pipeline that ingests real-time flight data from the OpenSky Network API, processes it using Medallion Architecture and load into a containerized architecture using Docker, with Apache Airflow for orchestration, PostgreSQL for metadata, and Snowflake as the cloud data warehouse, supporting scheduled batch processing and manual runs.
