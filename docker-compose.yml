@@ -27,8 +27,8 @@ services:
       sleep 10 &&
       airflow db migrate &&
       airflow users create \
-        --username ${AIRFLOW_ADMIN_USER} \
-        --firstname ${AIRFLOW_ADMIN_FIRSTNAME} \
+        --username ${AIRFLOW_ADMIN_USER} \ 
+        --firstname ${AIRFLOW_ADMIN_FIRSTNAME} \ 
         --lastname ${AIRFLOW_ADMIN_LASTNAME} \
         --role Admin \
         --email ${AIRFLOW_ADMIN_EMAIL} \
