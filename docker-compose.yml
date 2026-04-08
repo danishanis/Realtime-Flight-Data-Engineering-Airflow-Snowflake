@@ -32,7 +32,7 @@ services:
         --lastname ${AIRFLOW_ADMIN_LASTNAME} \
         --role Admin \
         --email ${AIRFLOW_ADMIN_EMAIL} \
-        --password ${AIRFLOW_ADMIN_PASSWORD} && \
+        --password ${AIRFLOW_ADMIN_PASSWORD} &&
       echo '✅ Airflow DB initialized successfully.'"
 
   airflow-webserver:
