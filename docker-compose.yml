@@ -26,13 +26,13 @@ services:
       echo 'Waiting for PostgreSQL...' &&
       sleep 10 &&
       airflow db migrate &&
-      airflow users create 
-        --username ${AIRFLOW_ADMIN_USER} 
-        --firstname ${AIRFLOW_ADMIN_FIRSTNAME} 
-        --lastname ${AIRFLOW_ADMIN_LASTNAME} 
-        --role Admin 
-        --email ${AIRFLOW_ADMIN_EMAIL} 
-        --password ${AIRFLOW_ADMIN_PASSWORD} &&
+      airflow users create \
+        --username ${AIRFLOW_ADMIN_USER} \
+        --firstname ${AIRFLOW_ADMIN_FIRSTNAME} \
+        --lastname ${AIRFLOW_ADMIN_LASTNAME} \
+        --role Admin \
+        --email ${AIRFLOW_ADMIN_EMAIL} \
+        --password ${AIRFLOW_ADMIN_PASSWORD} && \
       echo '✅ Airflow DB initialized successfully.'"
 
   airflow-webserver:
