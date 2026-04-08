@@ -33,7 +33,7 @@ services:
         --role Admin \
         --email ${AIRFLOW_ADMIN_EMAIL} \
         --password ${AIRFLOW_ADMIN_PASSWORD} &&
-      echo '✅ Airflow DB initialized successfully.'"
+        echo '✅ Airflow DB initialized successfully.'"
 
   airflow-webserver:
     image: apache/airflow:2.9.3
