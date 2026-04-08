@@ -25,7 +25,6 @@ services:
       -c "
       echo 'Waiting for PostgreSQL...' &&
       sleep 10 &&
-      airflow db init &&
       airflow db migrate &&
       airflow users create 
         --username ${AIRFLOW_ADMIN_USER} 
