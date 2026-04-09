@@ -1,9 +1,12 @@
+# First stage in Medallion Architecture: Ingest raw flight data from OpenSky API and 
+# store it in the Bronze layer as JSON files.
 
 import requests
 import json
 from datetime import datetime
 from pathlib import Path
 
+# Current state of all aircrafts being tracked globally by OpenSky Network API
 URL = "https://opensky-network.org/api/states/all"
 
 def run_bronze_ingestion(**context):
