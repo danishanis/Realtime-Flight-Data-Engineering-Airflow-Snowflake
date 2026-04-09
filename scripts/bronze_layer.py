@@ -23,7 +23,7 @@ def run_bronze_ingestion(**context):
     response = requests.get(URL, timeout=30) # API call
     response.raise_for_status() # Check if the request was successful, if not it will raise an HTTPError
 
-    data = response.json()
+    data = response.json() # parsing the JSON response
 
     # Every API call produces a uniquely named file based on the current timestamp. Re-running the pipeline
     # will create a new file without overwriting previous data, allowing us to maintain a historical record 
