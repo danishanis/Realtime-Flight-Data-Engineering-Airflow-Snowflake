@@ -107,4 +107,4 @@ with DAG(
     # )  
 
 
-    bronze #>> silver >> gold >> snowflake
+    # bronze >> silver >> gold >> snowflake
