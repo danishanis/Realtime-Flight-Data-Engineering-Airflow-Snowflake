@@ -49,8 +49,7 @@ services:
     command: >
       -c "
       echo 'Initializing Airflow DB...' &&
-      airflow db init &&
-      airflow db migrate &&
+      airflow db init migrate &&
       airflow users create --username ${AIRFLOW_ADMIN_USER} --firstname ${AIRFLOW_ADMIN_FIRSTNAME} --lastname ${AIRFLOW_ADMIN_LASTNAME} --role Admin --email ${AIRFLOW_ADMIN_EMAIL} --password ${AIRFLOW_ADMIN_PASSWORD} &&
       echo 'Airflow with new compose structure initialized successfully.'"
 
