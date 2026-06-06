@@ -1,6 +1,20 @@
 import json
+import logging
+import numpy as np
 import pandas as pd
 from pathlib import Path
+from datetime import datetime, timezone
+
+logger = logging.getLogger(__name__)
+
+# Column mapping for Silver layer as OpenSky returns arrays with 
+# no headers
+OPENSKY_COLUMNS = [
+    "icao24", "callsign", "origin_country", "time_position",
+    "last_contact", "longitude", "latitude", "baro_altitude",
+    "on_ground", "velocity", "true_track", "vertical_rate",
+    "sensors", "geo_altitude", "squawk", "spi", "position_source"
+]
 
 def run_silver_transform(**context):
     execution_date = context["ds_nodash"]
